@@ -1,6 +1,14 @@
+:root {
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --darkcyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+ }
+
 body{
     align-items: center;
-    background-color: hsl(30, 38%, 92%);
+    background-color: var(--cream);
 
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
@@ -15,9 +23,13 @@ h1{
     font-weight: 700;
 }
 main{
-    background-color: white;
-    width: 600px;
-    height: 400px;
+    background-color: var(--white);
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    width: 344px;
+    height: 600px;
+    margin:30px 15px;
 }
 p{
     color: hsl(228, 12%, 48%);
@@ -31,12 +43,48 @@ p{
     color: hsl(228, 45%, 44%);
   }
 
-/* 
+
+  .product-img{
+    height: 239px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    background-image: url("../images/image-product-mobile.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .product-detail{
+    margin: 20px;
+}
+
+
+.product-header h1{
+    color: var(--bluishblack);
+    font-size: 2.5em;
+    font-weight: 800;
+    font-family: 'Fraunces', serif;
+    line-height: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.product-header h2{
+    color: var(--mediumlightgrey);
+    font-size: 1.35em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
 .btn-add-to-cart{
     color: white;
     background-color: hsl(158, 36%, 37%);
-    width: 80%;
-} */
+    height: 40px;
+    width: 50%;
+}
 
 .price-tag {
     font-family: 'Fraunces', serif;
@@ -60,14 +108,15 @@ p{
 
 .img-desktop-only{
     float: left;
-    height: 400px;
+    height: 100%;
+    width: 50%;
     margin-right: 20px;
 }
 .img-mobile-only{
     display:none;
 }
 
-@media(max-width: 800px){
+@media(max-width: 820px){
   .img-desktop-only{
     display:none;
   }
