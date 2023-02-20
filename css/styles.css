@@ -1,0 +1,77 @@
+body{
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 50vh;
+    font-weight: 500;
+}
+h1{
+    font-weight: 700;
+}
+main{
+    background-color: white;
+    width: 600px;
+    height: 400px;
+}
+p{
+    color: hsl(228, 12%, 48%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+/* 
+.btn-add-to-cart{
+    color: white;
+    background-color: hsl(158, 36%, 37%);
+    width: 80%;
+} */
+
+.price-tag {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+    float: left;
+    padding: 10px;
+}
+
+ .before-price{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    align-items: center;
+    padding: 10px;
+
+}
+
+
+.img-desktop-only{
+    float: left;
+    height: 400px;
+    margin-right: 20px;
+}
+.img-mobile-only{
+    display:none;
+}
+
+@media(max-width: 800px){
+  .img-desktop-only{
+    display:none;
+  }
+  .img-mobile-only{
+    display:block;
+  }
+}
