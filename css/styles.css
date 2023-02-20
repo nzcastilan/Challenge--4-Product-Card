@@ -119,31 +119,20 @@ main{
 
 
 .add-to-cart{
-    align-items: center;
+    padding: 1rem;
+    font-weight: 700;
+    border: 0;
+    border-radius: 0.5rem;
+    color: white;
     background-color: var(--darkcyan);
-    border-radius: 8px;
-    border: none;
-    height: 50px;
-    padding: 0 80px;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
     width: 300px;
 }
 
-.add-to-cart .btn-pd{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-
-.add-to-cart img{
-    height: 16px;
-    width: 15px;
-}
-
-.add-to-cart p{
-    min-width: 100px;
-    font-size: 1.2em;
-    color: var(--white);
-    font-weight: 500;
-}
 
 @media screen and (min-width: 768px){
     main {
@@ -174,12 +163,12 @@ main{
       margin-right: 40px;
    }
    .add-to-cart {
-      width: 240px;
-      margin-top: 20px;
-      padding: 0 40px;
- 
+    width: 250px;
    }
    .add-to-cart:active{
      background-color: var(--very-dark-cyan);
    }
+
+
+   
  }
