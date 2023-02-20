@@ -165,7 +165,7 @@ main{
    .add-to-cart {
     width: 250px;
    }
-   .add-to-cart:active{
+   .add-to-cart:active,.add-to-cart:hover{
      background-color: var(--very-dark-cyan);
    }
 
