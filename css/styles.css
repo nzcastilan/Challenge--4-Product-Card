@@ -3,13 +3,24 @@
     --dark-grayish-blue: hsl(228, 12%, 48%);
     --white: hsl(0, 0%, 100%);
     --darkcyan: hsl(158, 36%, 37%);
+    --very-dark-cyan: hsl(158, 70%, 17%);
     --cream: hsl(30, 38%, 92%);
+ }
+
+ *, a{
+    color:var(--black);
+   cursor: pointer;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 14px;
+   font-weight: 500;
+   margin: 0px 0px 0px 0px;
+   text-decoration: none;
  }
 
 body{
     align-items: center;
     background-color: var(--cream);
-
+    color: hsl(228, 12%, 48%);
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     display: flex;
@@ -19,20 +30,18 @@ body{
     min-width: 50vh;
     font-weight: 500;
 }
+
+
+
 h1{
     font-weight: 700;
 }
 main{
     background-color: var(--white);
     border-radius: 10px;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
     width: 344px;
-    height: 600px;
+    height: 620px;
     margin:30px 15px;
-}
-p{
-    color: hsl(228, 12%, 48%);
 }
 
 .attribution {
@@ -58,12 +67,12 @@ p{
 
 
   .product-detail{
-    margin: 20px;
+    padding: 20px;
 }
 
 
 .product-header h1{
-    color: var(--bluishblack);
+    color: var(--very-dark-blue);
     font-size: 2.5em;
     font-weight: 800;
     font-family: 'Fraunces', serif;
@@ -72,55 +81,105 @@ p{
     margin-bottom: 10px;
 }
 .product-header h2{
-    color: var(--mediumlightgrey);
-    font-size: 1.35em;
-    font-weight: 600;
+    color: var(--dark-grayish-blue);
+
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 5px;
     margin-bottom: 20px;
 }
-.btn-add-to-cart{
-    color: white;
-    background-color: hsl(158, 36%, 37%);
-    height: 40px;
-    width: 50%;
+
+.product-desc p{
+    color: var(--dark-grayish-blue);
+
+    line-height: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
-.price-tag {
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
-    color: hsl(158, 36%, 37%);
-    float: left;
-    padding: 10px;
-}
-
- .before-price{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    color: hsl(228, 12%, 48%);
-    text-decoration: line-through;
+.product-price{
     align-items: center;
-    padding: 10px;
-
+    display: grid;
+    grid-template-columns: repeat(2,150px);
+    justify-content: start;
+    margin: 15px 0;
 }
 
 
-.img-desktop-only{
-    float: left;
-    height: 100%;
-    width: 50%;
-    margin-right: 20px;
-}
-.img-mobile-only{
-    display:none;
+.product-price .before-price p{
+    text-decoration: line-through;
 }
 
-@media(max-width: 820px){
-  .img-desktop-only{
-    display:none;
-  }
-  .img-mobile-only{
-    display:block;
-  }
+.product-price .after-price p{
+    color: var(--darkcyan);
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Fraunces', sans-serif;
 }
+
+
+.add-to-cart{
+    align-items: center;
+    background-color: var(--darkcyan);
+    border-radius: 8px;
+    border: none;
+    height: 50px;
+    padding: 0 80px;
+    width: 300px;
+}
+
+.add-to-cart .btn-pd{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.add-to-cart img{
+    height: 16px;
+    width: 15px;
+}
+
+.add-to-cart p{
+    min-width: 100px;
+    font-size: 1.2em;
+    color: var(--white);
+    font-weight: 500;
+}
+
+@media screen and (min-width: 768px){
+    main {
+      display: grid;
+      grid-template-rows:0;
+      grid-template-columns: repeat(2, 1fr);
+      width: 600px;
+      height: 450px;
+      margin-left: auto;
+      margin-right: auto;
+
+   
+   }
+   .product-img {
+      width: 300px;
+      height: 450px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius:0px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      background-image: url("../images/image-product-desktop.jpg");
+   }
+   .product-detail {
+      margin-left: 10px;
+      max-width: 260px;
+   }
+   .product-desc p {
+      margin-right: 40px;
+   }
+   .add-to-cart {
+      width: 240px;
+      margin-top: 20px;
+      padding: 0 40px;
+ 
+   }
+   .add-to-cart:active{
+     background-color: var(--very-dark-cyan);
+   }
+ }
